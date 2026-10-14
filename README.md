@@ -9,11 +9,11 @@ Power BI or Tableau dashboards. This will enable reporting and analysis with fin
 - Extract raw CSV files
 - Transform data (cleaning, validation, standardization)
 - Load into SQL staging + final tables
-- Generate Power BI Dashboards for analysis
+- Generate Power BI or Tableau Dashboards for analysis
 - Conclusions and recommendations
 
 ## Skills to be Demonstrated
-- Python (pandas)
+- Python (pandas, numpy)
 - Data cleaning
 - ETL pipeline design
 - SQL modeling
