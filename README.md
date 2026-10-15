@@ -1,24 +1,36 @@
 # Financial Transactions ETL Pipeline - IN PROGRESS
 
-This project will demonstrate a full ETL workflow using Python, pandas, SQL and Power BI or Tableau.
+This project will demonstrate a full ETL workflow using Python, SQL and data visualization.
 
-It will show the process of taking messy financial transaction data, cleaning it with Python, loading it into a structured SQL model and generating 
-Power BI or Tableau dashboards. This will enable reporting and analysis with final conclusions and recommendations.
+It shows the process of taking messy financial transaction data, cleaning it with Python, loading it into a structured SQL model and generating 
+Power BI dashboards. This enables reporting and analysis with final conclusions and recommendations.
 
-## Steps to be Taken
+## Steps
 - Extract raw CSV files
 - Transform data (cleaning, validation, standardization)
-- Load into SQL staging + final tables
-- Generate Power BI or Tableau Dashboards for analysis
+- Load into SQL
+- Generate dashboards for analysis
 - Conclusions and recommendations
 
-## Skills to be Demonstrated
-- Python (pandas, numpy)
-- Data cleaning
-- ETL pipeline design
-- Data modeling -
-- Normalization -
-- Entity relationships -
-- Power BI or Tableau Dashboards
+## Skills Demonstrated
+### Python (pandas and numpy:
+- Multi-table data modeling
+- Data quality assessment
+- Null handling
+- Duplicate detection/removal
+- Data standardization
+- Referential relationsips
+- ETL thinking
+- Exporting to a downstream data process
+  
+### SQL:
+- Data modeling
+- Normalization
+- Entity relationships
+- Data quality awareness
+- Referential integrity validation
+- ETL validation mindset
+  
+### Power BI or Tableau Dashboards (In Progress):
 - Business logic for financial data
 - Business recommendations
