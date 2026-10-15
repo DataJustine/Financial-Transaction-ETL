@@ -10,6 +10,7 @@ End-to-end ETL pipeline built using Python (pandas and numpy), PostgreSQL, and P
 - Conclusions and recommendations
 
 ## Skills Demonstrated
+- Python (pandas and numpy)
 - Data Profiling
 - Data Cleaning
 - ETL Development
