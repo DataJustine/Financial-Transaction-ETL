@@ -16,7 +16,9 @@ Power BI or Tableau dashboards. This will enable reporting and analysis with fin
 - Python (pandas, numpy)
 - Data cleaning
 - ETL pipeline design
-- SQL modeling
+- Data modeling -
+- Normalization -
+- Entity relationships -
 - Power BI or Tableau Dashboards
 - Business logic for financial data
 - Business recommendations
