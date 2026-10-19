@@ -2,12 +2,11 @@
 
 End-to-end ETL pipeline built using Python (pandas and numpy), PostgreSQL, and PowerBI.
 
-## Steps
-- Extract raw CSV files
-- Transform data (cleaning, validation, standardization)
-- Load into SQL
-- Generate dashboards for analysis
-- Conclusions and recommendations
+## Project Workflow
+1. Exploratory analysis and data profiling were performed in Jupyter notebooks.
+2. Final ETL logic was modularized into Python scripts for maintainability and reuse.
+3. Cleaned data was loaded into PostgreSQL and validated using SQL queries.
+4. Visualizations created using PowerBI.
 
 ## Skills Demonstrated
 - Python (pandas and numpy)
