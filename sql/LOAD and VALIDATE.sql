@@ -51,7 +51,7 @@ CREATE TABLE addresses(
 
 -- Noted while in data exploration there are NULLs present in the address fields. 
 -- To preserve source data NOT NULL constraint will not be used.
--- Recommended that after business rules fully defined, add contraints to production environment. 
+-- Recommended that after business rules fully defined, add constraints to production environment. 
 -- This logic will be applied to subsequent tables.
 
 -- Import data
@@ -205,7 +205,7 @@ CREATE TABLE loans(
 
 -- During data exploration, records were identified where StartDate occurred after EstimatedEndDate.
 -- To resolve this a CHECK constraint could be implemented as follows: EstimatedEndDate >= StartDate.
--- However, the source data also contains NULL values. Due to the objective is to preserve validated source data,
+-- However, the source data also contains NULL values. Because the objective is to preserve validated source data,
 -- it will not be implemented at this stage. This should be considered when business requirements are being finalized 
 -- and implemented to the production environment, as applicable.
 
@@ -278,6 +278,13 @@ FROM transactions;
 ----------------------------------------------------------------------------------------------------------------------------------
 -- VALIDATE
 --------------------------------
+
+-- Because foreign key constraints are enforced at load time, 
+-- the orphan-record validation queries serve primarily as a 
+-- demonstration of referential integrity testing rather than a 
+-- necessary control. The expectation is that no records return.
+
+---------------------------------
 -- Orphan customer records
 
 SELECT * 
@@ -298,6 +305,25 @@ WHERE a.AccountID IS NULL;
 
 -- None found
 ---------------------------------
+-- Orphan transactions
+
+SELECT *
+FROM transactions t
+LEFT JOIN accounts a
+	ON t.AccountOriginID = a.AccountID
+WHERE a.AccountID IS NULL;
+
+-- None noted
+
+SELECT *
+FROM transactions t
+LEFT JOIN accounts a
+	ON t.AccountDestinationID = a.AccountID
+WHERE a.AccountID IS NULL;
+
+-- None noted
+
+---------------------------------
 -- Account balance statistics
 
 SELECT
@@ -310,6 +336,7 @@ FROM accounts
 -- The variance between Python mean and SQL avg caused most likely due to rounding differences in the programs. 
 -- This appears appropriate.
 
+----------------------------------
 -- PrincipalAmount balance statistics
 
 SELECT
@@ -318,12 +345,12 @@ SELECT
 	AVG(PrincipalAmount)
 FROM loans
 
--- This is consisent with balances reviewed in Python Data Exploration MIN = 1128.49, MAX = 99830.33, MEAN = 51780.517447. 
+-- This is consistent with balances reviewed in Python Data Exploration MIN = 1128.49, MAX = 99830.33, MEAN = 51780.517447. 
 -- The variance between Pthyon mean and SQL avg caused most likely due to rounding differences in the programs. 
 -- This appears appropriate.
 
 ---------------------------------
--- Review critical data
+-- Review critical data and largest table
 
 SELECT COUNT(*)
 FROM transactions
@@ -332,4 +359,5 @@ WHERE AccountOriginID IS NULL
 	OR AMOUNT IS NULL; 
 	
 -- No values missing from crucial fields.
+-----------------------------------
 
