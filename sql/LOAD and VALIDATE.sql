@@ -3,7 +3,7 @@
 
 --------------------------------------------------------------------------------------------------------------------------------
 -- Create database to house data
--- CREATE DATABASE financial_transaction_etl;
+--CREATE DATABASE financial_transaction_etl;
 
 -- Connect to the database before continuing
 --------------------------------------------------------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ CREATE TABLE account_statuses(
 
 -- Import data
 COPY account_statuses
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\account_statuses_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\account_statuses_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -32,7 +32,7 @@ CREATE TABLE account_types(
 
 -- Import data
 COPY account_types
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\account_types_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\account_types_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -56,7 +56,7 @@ CREATE TABLE addresses(
 
 -- Import data
 COPY addresses
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\addresses_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\addresses_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -82,7 +82,7 @@ CREATE TABLE branches(
 
 -- Import data
 COPY branches
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\branches_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\branches_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 
@@ -99,7 +99,7 @@ CREATE TABLE customer_types(
 
 -- Import data
 COPY customer_types
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\customer_types_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\customer_types_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -124,7 +124,7 @@ CREATE TABLE customers(
 -- Import data
 
 COPY customers
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\customers_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\customers_cleaned.csv'
 WITH (FORMAT CSV, HEADER); 
 
 -- Check data
@@ -154,7 +154,7 @@ CREATE TABLE accounts(
 
 -- Import data
 COPY accounts
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\accounts_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\accounts_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 
@@ -178,7 +178,7 @@ CREATE TABLE loan_statuses(
 
 -- Import data
 COPY loan_statuses
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\loan_statuses_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\loan_statuses_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -211,7 +211,7 @@ CREATE TABLE loans(
 
 -- Import data
 COPY loans
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\loans_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\loans_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -232,7 +232,7 @@ CREATE TABLE transaction_types(
 );
 
 COPY transaction_types
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\transaction_types_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\transaction_types_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Check data
@@ -260,7 +260,7 @@ CREATE TABLE transactions(
 
 -- Import Data
 COPY transactions
-FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Raw\transactions_cleaned.csv'
+FROM 'C:\Users\mavor\Data Science\Financial Transactions ETL\Data\Cleaned\transactions_cleaned.csv'
 WITH (FORMAT CSV, HEADER);
 
 -- Imported without issue
