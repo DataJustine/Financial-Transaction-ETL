@@ -18,3 +18,12 @@ End-to-end ETL pipeline built using Python (pandas and numpy), PostgreSQL, and P
 - Data Validation
 - Power BI
 - Financial Data Analysis
+
+## Advanced SQL Concepts Demonstrated
+- Common Table Expressions (CTEs)
+- Window Functions
+- RANK()
+- COALESCE()
+- Date Imputation
+- Financial Calculations
+- Data Reconciliation Analysis
