@@ -27,3 +27,7 @@ End-to-end ETL pipeline built using Python (pandas and numpy), PostgreSQL, and P
 - Date Imputation
 - Financial Calculations
 - Data Reconciliation Analysis
+
+
+Notes for Visuals:
+Transaction activity declines significantly after 2023. Review of the source data identified fewer transaction records in later years as well as approximately 990 records with missing transaction dates. The trend should therefore be interpreted within the context of the source data limitations.
